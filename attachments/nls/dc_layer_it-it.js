@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.dc_layer_it-it");dojo.provide("dijit.nls.loading");dijit.nls.loading._built=true;dojo.provide("dijit.nls.loading.it_it");dijit.nls.loading.it_it={"loadingState":"Caricamento in corso...","errorState":"Si ? verificato un errore"};

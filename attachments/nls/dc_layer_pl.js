@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.dc_layer_pl");dojo.provide("dijit.nls.loading");dijit.nls.loading._built=true;dojo.provide("dijit.nls.loading.pl");dijit.nls.loading.pl={"loadingState":"?adowanie...","errorState":"Niestety, wyst?pi? b??d"};

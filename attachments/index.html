@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    
+    <title></title>
+    <link href="dijit/themes/claro/claro.css" rel="stylesheet" type="text/css" />
+    <link href="layout.css" rel="stylesheet" type="text/css" />
+    <!-- The dojo.js and dc_layer.js included here are built by the dojo builder.  
+         They include all the dojo modules for this application. -->
+    <script type="text/javascript" src="dojo.js" data-dojo-config="parseOnLoad:true, modulePaths:{'tcjr':'tcjr'}"></script>
+    <script type="text/javascript" src="dc_layer.js"></script>
+
+    <script type="text/javascript">
+    
+      dojo.require('tcjr.Dashboard');
+      dojo.require('tcjr.CouchStore');
+
+      dojo.ready(function() {
+
+        // Create the store for the current database
+        var db = new tcjr.CouchStore({database: document.location.pathname+'/api/'});
+        var server = new tcjr.CouchStore({database: document.location.protocol+'//'+document.location.host+'/'});
+
+        server.get('_session').then(function(session) {
+          var user = session.userCtx.name || 'Guest';
+          dojo.byId('userinfo').innerHTML = 'Logged in as ' + user;
+        });
+
+        // sample lookup
+        db.get('testdoc-1234').then(function(doc) {
+          console.debug("Got doc = %o", doc);
+          dojo.byId('info').innerHTML = doc.something;
+        }, function(err) {
+          console.debug("No doc; err = %o", err);
+          console.debug("        err.status = %o", err.status);
+        });
+
+
+      });
+    </script>
+    
+  </head>
+  <body class="claro">
+    
+    <div id="full-page">
+
+      <div dojoType="dijit.layout.BorderContainer" gutters="false" id="borderContainer" style="width:100%; height:100%">
+        <div class=”banner” dojoType="dijit.layout.ContentPane" region="top" splitter="false" id="layoutTop">
+          <!-- TOP STUFF HERE -->
+          <div id="userinfo">...</div>
+        </div>
+        
+        <div dojoType="dijit.layout.ContentPane" region="center" id="layoutMain">
+          <!--The nested div below is to give the outer div a zero height in IE-->
+          <div id="status-messages"><div style="display:none"></div></div>
+          <!-- MAIN STUFF HERE -->
+          <div id="main-content-area">
+            Info: <span id="info"></span>
+          </div>
+          
+        </div>
+        
+        <div dojoType="dijit.layout.ContentPane" region="bottom" id="layoutBottom">
+          <div style="text-align: center;">
+            <div style="float: left;">Couch &amp; Dojo</div>
+            &copy; 2011 tcjr
+            <div style="float: right;">Ver 0</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+  </body>
+</html>

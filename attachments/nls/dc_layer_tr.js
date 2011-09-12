@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.dc_layer_tr");dojo.provide("dijit.nls.loading");dijit.nls.loading._built=true;dojo.provide("dijit.nls.loading.tr");dijit.nls.loading.tr={"loadingState":"Y?kleniyor...","errorState":"?zg?n?z, bir hata olu?tu"};

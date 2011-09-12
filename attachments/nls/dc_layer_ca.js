@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.dc_layer_ca");dojo.provide("dijit.nls.loading");dijit.nls.loading._built=true;dojo.provide("dijit.nls.loading.ca");dijit.nls.loading.ca={"loadingState":"S'est? carregant...","errorState":"Ens sap greu. S'ha produ?t un error."};

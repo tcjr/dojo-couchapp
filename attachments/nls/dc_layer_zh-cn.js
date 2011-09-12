@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.dc_layer_zh-cn");dojo.provide("dijit.nls.loading");dijit.nls.loading._built=true;dojo.provide("dijit.nls.loading.zh_cn");dijit.nls.loading.zh_cn={"loadingState":"????...","errorState":"?????????"};

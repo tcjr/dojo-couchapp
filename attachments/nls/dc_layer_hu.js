@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.dc_layer_hu");dojo.provide("dijit.nls.loading");dijit.nls.loading._built=true;dojo.provide("dijit.nls.loading.hu");dijit.nls.loading.hu={"loadingState":"Bet?lt?s...","errorState":"Sajn?lom, hiba t?rt?nt"};

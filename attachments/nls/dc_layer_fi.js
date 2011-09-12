@@ -1,0 +1,1 @@
+dojo.provide("dojo.nls.dc_layer_fi");dojo.provide("dijit.nls.loading");dijit.nls.loading._built=true;dojo.provide("dijit.nls.loading.fi");dijit.nls.loading.fi={"loadingState":"Lataus on meneill??n...","errorState":"On ilmennyt virhe."};
